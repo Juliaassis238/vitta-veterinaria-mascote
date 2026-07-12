@@ -46,15 +46,8 @@ export default function Home() {
     <div className="bg-[#F6F3EC] text-[#1F2A24] font-sans overflow-x-hidden">
       {/* Header */}
       <header className={`fixed top-0 left-0 w-full flex items-center justify-between px-4 md:px-[6vw] py-4 md:py-7 z-100 transition-all duration-300 ${scrolled ? 'bg-white/90 backdrop-blur-xl shadow-sm' : 'mix-blend-difference'}`}>
-        <div className="flex items-center gap-3">
-          <img 
-            src="/manus-storage/vitta-mascote_12bf93a3.png" 
-            alt="VITTA Mascote" 
-            className="w-10 h-10 md:w-12 md:h-12 object-contain"
-          />
-          <div className="font-serif text-lg md:text-xl text-white">
-            VITTA <span className="text-[#B08D3F]">·</span> Veterinária
-          </div>
+        <div className="font-serif text-lg md:text-xl text-white">
+          VITTA <span className="text-[#B08D3F]">·</span> Veterinária
         </div>
         <nav className="hidden md:flex gap-10">
           <a href="#filosofia" className="text-white text-xs uppercase tracking-wider font-medium hover:text-[#B08D3F] transition">Clínica</a>
@@ -77,16 +70,7 @@ export default function Home() {
           }}
         />
         
-        {/* Mascote flutuante no hero */}
-        {mascotVisible && (
-          <div className="absolute top-1/4 right-4 md:right-12 w-32 md:w-48 h-32 md:h-48 animate-bounce" style={{animationDuration: '3s'}}>
-            <img 
-              src="/manus-storage/vitta-mascote_12bf93a3.png" 
-              alt="Mascote VITTA" 
-              className="w-full h-full object-contain drop-shadow-2xl"
-            />
-          </div>
-        )}
+
 
         <div className="relative z-10 text-white max-w-[900px]">
           <p className="text-[#B08D3F] text-xs uppercase tracking-widest mb-4 md:mb-6 flex items-center gap-2.5" data-reveal>
@@ -324,14 +308,35 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Mascote Showcase */}
+      <section className="bg-gradient-to-b from-[#F6F3EC] to-[#EFEAE0] py-20 md:py-32 px-4 md:px-[6vw]">
+        <div className="max-w-[1280px] mx-auto text-center">
+          <p className="text-[#B08D3F] text-xs uppercase tracking-widest mb-6 flex items-center justify-center gap-2.5" data-reveal>
+            <span className="w-6 h-px bg-[#B08D3F]" />
+            Conheça nosso mascote
+            <span className="w-6 h-px bg-[#B08D3F]" />
+          </p>
+          <h2 className="text-3xl md:text-5xl font-serif font-medium mb-8 md:mb-16" data-reveal>
+            O símbolo da sabedoria e cuidado da VITTA
+          </h2>
+          <div className="flex justify-center">
+            <div className="w-48 md:w-72 h-48 md:h-72 bg-white rounded-2xl shadow-2xl p-8 md:p-12 flex items-center justify-center hover:shadow-3xl transition-shadow duration-500" data-reveal="scale">
+              <img 
+                src="/manus-storage/vitta-mascote_12bf93a3.png" 
+                alt="Mascote VITTA" 
+                className="w-full h-full object-contain"
+              />
+            </div>
+          </div>
+          <p className="text-base md:text-lg text-[#1F2A24]/72 font-light leading-relaxed max-w-[600px] mx-auto mt-12 md:mt-16" data-reveal>
+            Representando a sabedoria, a vigilância e o cuidado atencioso que oferecemos a cada paciente. Nossa mascote é o símbolo vivo do compromisso da VITTA com a excelência veterinária.
+          </p>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="bg-[#0E1713] text-[#F6F3EC]/50 py-8 md:py-12 px-4 md:px-[6vw] flex flex-col md:flex-row justify-between items-center text-xs tracking-wider gap-4">
-        <div className="text-[#F6F3EC]/85 flex items-center gap-2">
-          <img 
-            src="/manus-storage/vitta-mascote_12bf93a3.png" 
-            alt="VITTA" 
-            className="w-6 h-6 object-contain"
-          />
+        <div className="text-[#F6F3EC]/85">
           VITTA <span className="text-[#B08D3F]">·</span> Veterinária
         </div>
         <div className="text-center flex-1">© 2026 VITTA. Todos os direitos reservados.</div>
