@@ -306,7 +306,8 @@ export default function Home() {
       {/* Footer */}
       <footer className="bg-[#0E1713] text-[#F6F3EC]/50 py-12 px-[6vw] flex justify-between items-center text-xs tracking-wider">
         <div className="text-[#F6F3EC]/85">VITTA <span className="text-[#B08D3F]">·</span> Veterinária</div>
-        <div>© 2026 VITTA. Todos os direitos reservados.</div>
+        <div className="text-center flex-1">© 2026 VITTA. Todos os direitos reservados.</div>
+        <div className="text-[#F6F3EC]/60">Criado por Júlia Assis / Word Tecnologia</div>
       </footer>
     </div>
   );
